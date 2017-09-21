@@ -1,6 +1,0 @@
-[submodule "hello"]
-	path = hello
-	url = https://github.com/okutani-t/hello.git
-[submodule "test_gem_repository"]
-	path = test_gem_repository
-	url = https://github.com/testgem/test_gem_repository.git
