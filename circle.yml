@@ -1,0 +1,19 @@
+machine:
+  ruby:
+    version: 2.3.0
+  timezone: Asia/Tokyo
+  #services:
+  #  - mysql
+dependencies:
+  cache_directories:
+    - "vendor/bundle"
+  pre:
+    - bundle -j4 --path=vendor/bundle --without not_circleci
+test:
+  override:
+    # - bundle exec rubocop -c .rubocop.yml
+    - bundle exec rspec
+#database:
+#  override:
+#    - cp config/database.yml.ci config/database.yml
+#    - bundle exec rake db:create db:migrate --trace
